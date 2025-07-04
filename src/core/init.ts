@@ -1,17 +1,13 @@
-export interface SDKConfig {
-  apiKey: string
-  network: string
-}
+import { ZypherConfig } from '../types/config'
+import { setZypherConfig } from './config'
 
-let internalConfig: SDKConfig
-
-export function init(config: SDKConfig) {
+export function init(config: ZypherConfig) {
   if (!config.apiKey || !config.network) {
-    throw new Error("Missing required fields")
+    throw new Error('Missing required fields')
   }
 
-  internalConfig = config
-  console.log("Zypher SDK initialized:", internalConfig)
+  setZypherConfig(config)
 
+  console.log('Zypher SDK initialized with config:', config)
   return true
 }

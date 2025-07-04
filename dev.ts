@@ -1,3 +1,10 @@
-import { init } from './src'
+import { init } from './src/core/init'
+import { getZypherConfig } from './src/core/config'
 
-init({ apiKey: 'test', network: 'polygon' })
+init({
+  apiKey: 'abc123',
+  network: 'polygon',
+  debug: true,
+})
+
+console.log('Config fetched later:', getZypherConfig())
