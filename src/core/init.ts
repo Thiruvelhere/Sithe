@@ -1,0 +1,1 @@
+//contains the init() function -- sets up and stores the config
