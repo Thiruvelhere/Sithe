@@ -1,1 +1,3 @@
-//simple test file to manually run and check the SDK
+import { init } from './src'
+
+init({ apiKey: 'test', network: 'polygon' })

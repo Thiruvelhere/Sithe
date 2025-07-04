@@ -1,1 +1,1 @@
-//main entry point user imports from here 
+export { init } from './core/init'
