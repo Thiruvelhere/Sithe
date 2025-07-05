@@ -1,8 +1,8 @@
 import { init } from './src/core/init'
 import { getZypherConfig } from './src/core/config'
-import { runMiddleware } from './src/utils/middleware'
-import { getContext } from './src/utils/sdkContext'
-import { queryLLM } from './src/utils/llm'  // ✅ Real LLM hook
+import { runMiddleware } from './src/middleware/middleware'
+import { getContext } from './src/core/sdkContext'
+import { queryLLM } from './src/agents/llm'  // ✅ Real LLM hook
 
 async function main() {
   // 🔁 Initialize SDK config
