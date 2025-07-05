@@ -1,33 +1,38 @@
 import { init } from './src/core/init'
 import { getZypherConfig } from './src/core/config'
 import { runMiddleware } from './src/utils/middleware'
-import { setPrompt, setResponse, setProof, getContext } from './src/utils/sdkContext'
+import { getContext } from './src/utils/sdkContext'
+import { queryLLM } from './src/utils/llm'  // ✅ Real LLM hook
 
+async function main() {
+  // 🔁 Initialize SDK config
+  init({
+    apiKey: 'abc123',
+    network: 'polygon',
+    debug: true,
+    agent: 'ollama',
+    middleware: {
+      proofOfPrompt: true,
+      proofOfInference: true,
+    },
+  })
 
-// 🔧 Manually simulate context for test
-setPrompt("What is zkML?")
-setResponse("zkML is zero-knowledge machine learning...")
-setProof("0xfakezkproof123")
+  console.log('⚙️ Config fetched later:', getZypherConfig())
 
-const context = getContext()
-console.log("🧠 [Manual] Zypher Runtime Context:", context)
+  // 🔁 Middleware before prompt
+  runMiddleware('proofOfPrompt')
 
-// 🔁 Initialize SDK config
-init({
-  apiKey: 'abc123',
-  network: 'polygon',
-  debug: true,
-  agent: 'ollama',
-  middleware: {
-    proofOfPrompt: true,
-    proofOfInference: false,
-  },
-})
+  // 🤖 Real LLM call via Ollama
+  const prompt = "What is thiruvel in one sentence?"
+  const response = await queryLLM(prompt)
+  console.log('🤖 LLM Response:', response)
 
-// 🔍 Verify internal config
-console.log('⚙️ Config fetched later:', getZypherConfig())
+  // 🔁 Middleware after response
+  runMiddleware('proofOfInference')
 
-// 🧪 Run middleware manually
-runMiddleware('proofOfPrompt')
-runMiddleware('proofOfInference')
+  // 🧠 Context state after LLM call
+  const context = getContext()
+  console.log("🧠 [Zypher] Final Runtime Context:", context)
+}
 
+main()
