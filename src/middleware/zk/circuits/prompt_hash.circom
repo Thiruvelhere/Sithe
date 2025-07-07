@@ -9,7 +9,8 @@ template Main() {
     component hasher = Poseidon(1);
     hasher.inputs[0] <== prompt;
 
-    promptHash === hasher.out;
+    // ✅ Enforce equality between hasher.out and provided input
+    hasher.out === promptHash;
 }
 
 component main = Main();
