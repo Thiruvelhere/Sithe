@@ -1,5 +1,5 @@
 import { getZypherConfig } from '../core/config'
-import { generateFakeZKProof } from './zk/generateFakeZKProof'
+import { generateProof } from './zk/generateProof'
 
 export function shouldRun(middlewareName: 'proofOfPrompt' | 'proofOfInference') {
   const config = getZypherConfig()
@@ -15,7 +15,7 @@ export function runMiddleware(middlewareName: 'proofOfPrompt' | 'proofOfInferenc
   console.log(`[ZYPHER]: Running ${middlewareName} ✅`)
 
   if (middlewareName === 'proofOfInference') {
-    generateFakeZKProof()
+    generateProof()
   }
 
   // You can add logic for proofOfPrompt later too if needed

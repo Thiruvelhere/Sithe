@@ -1,13 +1,16 @@
-node_modules
-dist
+# Node
+node_modules/
+dist/
+build/
 .env
-/build
+
+# ZK Artifacts
 *.r1cs
 *.zkey
 *.ptau
 *.sym
+*.wasm
+*.wtns
 *_js/
 witness.wtns
 proof.json
-public.json
-verification_key.json

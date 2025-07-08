@@ -19,16 +19,16 @@ async function main() {
 
   console.log('⚙️ Config fetched later:', getZypherConfig())
 
-  // 🔁 Middleware before prompt
-  runMiddleware('proofOfPrompt')
+  // 🔁 Middleware before prompt (ZK input)
+  await runMiddleware('proofOfPrompt')  // ⬅️ Add await here
 
   // 🤖 Real LLM call via Ollama
-  const prompt = "What is thiruvel in one sentence?"
+  const prompt = "What is uuu in one sentence?"
   const response = await queryLLM(prompt)
   console.log('🤖 LLM Response:', response)
 
-  // 🔁 Middleware after response
-  runMiddleware('proofOfInference')
+  // 🔁 Middleware after response (ZK proof)
+  await runMiddleware('proofOfInference')  // ⬅️ Add await here
 
   // 🧠 Context state after LLM call
   const context = getContext()
