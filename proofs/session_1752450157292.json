@@ -1,0 +1,21 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "In music notation, \"UUU\" is a chord abbreviation that represents the musical chord ukulele tuning, which has a unique four-string combination of G-C-E-B.",
+  "timestamp": 1752450157292,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": null,
+  "promptHash": null,
+  "success": true,
+  "error": null
+}
