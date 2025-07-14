@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "In music, \"Uuu\" (also known as a \"vocal grunt\" or \"umu\") is an onomatopoeic sound effect used to represent a soft, gentle humming or grunting noise, often used to add emotional depth or atmosphere to a song.",
+  "timestamp": 1752462024590,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_ba2b3556fdaf9e36c123d932",
+  "promptHash": "19201350697170854194479429556638814129835558470009917059174434365418824259757",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "17549441438894613895801693615622070479733307242752105629610578331753580068611",
+        "342682766238144130495004865588503188531102545166700906644712112156763189244",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "14236698916130865672125877438561100153644590303699256058402743122325952641605",
+          "13456215996486069271990334560112449124422554304054792494996438678457382681162"
+        ],
+        [
+          "9749820878212593078788535966303651122389446984535297125936548829009295166104",
+          "18971479033563265367097409126328419289752977215476781398296771276703086190213"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "20994935412914364182854511653962788456544958171403297864213568539377326082743",
+        "17590647577152649934550943320358590610818256302485383674324750834976014452528",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x49f2241dc54a6ac13a5be3f83b380c26282060e60dd3e4568e820c1ff46df6213541a98431fe7ab08c6b9668c348dff668b261144a48f5214f00498a7810a0a71c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

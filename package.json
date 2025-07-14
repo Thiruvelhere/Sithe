@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "circomlibjs": "^0.1.7",
+    "dotenv": "^17.2.0",
     "node-fetch": "^3.3.2",
     "openai": "^5.8.2",
     "snarkjs": "^0.7.5"

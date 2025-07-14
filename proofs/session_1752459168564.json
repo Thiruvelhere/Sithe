@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "Uuu refers to the chemical symbol for uranium, a radioactive, metallic element with the atomic number 92.",
+  "timestamp": 1752459168564,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_5c0b1bae206e21775aa11511",
+  "promptHash": null,
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "12641867205350475982113204904613422838807484526473674659868756470103249216952",
+        "19921597280637537029441498477501070681536127187089377420710324437741328007731",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "13312568425235972336142891591236468351142036037765375933931725729292072782374",
+          "17380804785725410946155779739708083406729028673635184800490354457130441038956"
+        ],
+        [
+          "1967400961400719598179161319340667732700562887812498552926022694955971946338",
+          "5714032867064776040906572336531447489813903414524050130940542320263103217782"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "16965006351444634636808770155839746848349839472413187160865743316074521794818",
+        "14453184099028737642784185899242043243336256584121343656291851335045993778217",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x00816da2695efcda04f4f53afebd94ec1749ff2d0dced41f02cde24c3b49d44d3f885d24ded8d892b0ee36ebe68d0c4bdd5d363569cd8a36bf0e0b5fa6af6cc61b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

@@ -55,7 +55,7 @@ export async function generateProof(): Promise<string> {
 
           // ✅ Set for context & export
           setZkProof({ proof, publicSignals });
-          setPromptHash(publicSignals[0]); // assuming promptHash is the first
+          setPromptHash(input.promptHash); // assuming promptHash is the first
           setStamp(zkStamp);
           
 

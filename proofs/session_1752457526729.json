@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "In music notation, \"U\" or \"uuu\" represents a dotted whole note, which is a musical symbol indicating that the note should be held for four beats.",
+  "timestamp": 1752457526729,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_d34989d91d57a4aa12992ef6",
+  "promptHash": null,
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "20037009728039326314447570679231750087412918678383434564870384063412465613837",
+        "14603626560912661975638263271236234648299160265129371497867137367728149275459",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "19267621232231707011379041422353473280172086581563880548063650246155580143288",
+          "5399528799905210247561375052801011963186646910158280145045553100387379007457"
+        ],
+        [
+          "19130316951501104278051286217169380237417458511832621220922420817285963136559",
+          "13007523711859435835716764056676002924924963656328226522653777868725946233745"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "19821591147059449191655538807729402860695008886829847933988602018180033747779",
+        "12226667537404344258023863667241717602736376245446445304078598027224906109924",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signedBy": "0xDf162aBC74102A7e7a174B4632F013BA3D88169b",
+  "signature": "0xb9ed4b9653ca41ed57e98da7f133b35630457d1664b40179a17ebcf96e98fd1843b6c4bf6206ea144674757120589d7377d072c96524a35b85785e52fdc55f791c"
+}

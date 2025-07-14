@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { ZypherConfig } from '../types/config';
 import { getContext } from '../core/sdkContext';
+import { signData, getSignerAddress } from '../utils/signer';  // ✅ real wallet signer
 
 export type ProofType = 'PromptOnly' | 'PromptAndInference';
 
@@ -31,17 +32,27 @@ export async function finalizeAndExport({
 }: ExportOptions) {
   const context = getContext();
 
+  const finalStamp = stamp ?? context.stamp ?? '';
+  const finalPromptHash = promptHash ?? context.promptHash ?? null;
+
+  // ✅ Combine message for signing
+  const dataToSign = prompt + response + finalStamp;
+  const signature = await signData(dataToSign);
+  const signedBy = getSignerAddress();
+
   const sessionOutput = {
     prompt,
     response,
     timestamp,
     config,
     proofType,
-    stamp: stamp ?? context.stamp ?? null,
-    promptHash: promptHash ?? context.promptHash ?? null,
+    stamp: finalStamp,
+    promptHash: finalPromptHash,
     zkProof: context.zkProof ?? null,
     success: error === null,
     error,
+    signature,
+    signedBy,
   };
 
   try {

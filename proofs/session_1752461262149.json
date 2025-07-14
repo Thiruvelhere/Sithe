@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "\"Uuu\" is a sound or vocalization often used to express excitement, surprise, or playfulness, similar to \"oh wow\" or \"whoa\", and can be written as three lowercase \"u\"s.",
+  "timestamp": 1752461262149,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_41ae3ff0dbf5e9c4f92a0fca",
+  "promptHash": "19201350697170854194479429556638814129835558470009917059174434365418824259757",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "21327209210721442131565629062698576456058177889359757819866830548355148805966",
+        "3855805406352605004517944950030764616549992691101329567719447380244120085149",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "3811803030474621864737311508201503718878211913430658642741562969880737938477",
+          "7627258826485322336176125121796185063081494427239001673161291279878748834816"
+        ],
+        [
+          "15007581331514716052582264817493748216394317523724777712893994787405195466617",
+          "16410164046074858631322870383458526633168690620157519777330090703489181079944"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "764425045329307780691895961482189499328240039510796621365869964041029277105",
+        "13282944985558545488960818885969222263506764970330952767690526427690776087311",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0xd853f04e3305da7d4981062907c1b550e8bc1bc01f400006ac3622981470be2622d6b40a42e1fe207b8b11a80292369c1037dc2de214b74809c62721ec5574681b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

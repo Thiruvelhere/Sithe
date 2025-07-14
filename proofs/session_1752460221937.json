@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "Uuuhhh is an informal onomatopoeic expression used to convey surprise, confusion, or hesitation, often written as \"uuuh\" or \"uuuu\".",
+  "timestamp": 1752460221937,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_f32e2bb9657c5bfd26f5cb0a",
+  "promptHash": null,
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "4810719675467637227816687788081423631208027657428737502487834957590395758636",
+        "5982270174370271299665582652179754849684704103388472536876002369175117799015",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "6726208880705721652392888815191356541811253608405133269571275601290098264768",
+          "15841739730796161933466840401533816598306738399812387589611954155039184395575"
+        ],
+        [
+          "21661708557543067467941052384820713034533985422245363656385869349405086081862",
+          "16979492652825734774955520203306645602856668256645318777339775096063613256182"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "12242513244765149282516472883947553499114994961444603692672518583278047256378",
+        "10059420283408257612670070357233128213707068510550013537541124548657987227052",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x73e8e699a3c58ef35c01cc96a659164292a02e9b5b922331e49d4c577401ecc64dd5e26a0b7572b83bc6d1fe7a7e84f971fa36cb442edf8b796662c2e6253df01c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

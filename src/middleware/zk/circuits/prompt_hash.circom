@@ -4,13 +4,12 @@ include "poseidon.circom";
 
 template Main() {
     signal input prompt;
-    signal input promptHash;
+    signal output promptHash; // ✅ Make promptHash an output
 
     component hasher = Poseidon(1);
     hasher.inputs[0] <== prompt;
 
-    // ✅ Enforce equality between hasher.out and provided input
-    hasher.out === promptHash;
+    promptHash <== hasher.out; // ✅ assign output, not constrain input
 }
 
 component main = Main();
