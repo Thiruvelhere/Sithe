@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { ZypherConfig } from '../types/config';
+import { getContext } from '../core/sdkContext';
 
 export type ProofType = 'PromptOnly' | 'PromptAndInference';
 
@@ -28,14 +29,17 @@ export async function finalizeAndExport({
   promptHash,
   error,
 }: ExportOptions) {
+  const context = getContext();
+
   const sessionOutput = {
     prompt,
     response,
     timestamp,
     config,
     proofType,
-    stamp: stamp ?? null,
-    promptHash: promptHash ?? null,
+    stamp: stamp ?? context.stamp ?? null,
+    promptHash: promptHash ?? context.promptHash ?? null,
+    zkProof: context.zkProof ?? null,
     success: error === null,
     error,
   };

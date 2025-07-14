@@ -1,0 +1,22 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "Uuu is the international phonetic alphabet (IPA) representation of the sound \"oo\" as in \"boot,\" \"moon,\" or \"look.\"",
+  "timestamp": 1752456080034,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": null,
+  "promptHash": null,
+  "zkProof": null,
+  "success": true,
+  "error": null
+}

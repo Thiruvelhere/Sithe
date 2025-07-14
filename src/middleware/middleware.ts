@@ -6,7 +6,7 @@ export function shouldRun(middlewareName: 'proofOfPrompt' | 'proofOfInference') 
   return config.middleware?.[middlewareName] ?? false
 }
 
-export function runMiddleware(middlewareName: 'proofOfPrompt' | 'proofOfInference') {
+export async function runMiddleware(middlewareName: 'proofOfPrompt' | 'proofOfInference') {
   if (!shouldRun(middlewareName)) {
     console.log(`[ZYPHER]: Skipping ${middlewareName} ❌`)
     return
@@ -15,8 +15,8 @@ export function runMiddleware(middlewareName: 'proofOfPrompt' | 'proofOfInferenc
   console.log(`[ZYPHER]: Running ${middlewareName} ✅`)
 
   if (middlewareName === 'proofOfInference') {
-    generateProof()
+    await generateProof() // 🔁 Add this await!
   }
 
-  // You can add logic for proofOfPrompt later too if needed
+  // proofOfPrompt can be added similarly later
 }

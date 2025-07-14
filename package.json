@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --dts",
+    "verify": "ts-node src/cli/verify.ts",
     "dev": "ts-node dev.ts"
   },
   "keywords": [],

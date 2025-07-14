@@ -2,10 +2,13 @@
 type AgentExecutionContext = {
   currentPrompt?: string;
   response?: string;
-  zkProof?: string;
   timestamp?: number;
-  stamp?: string;         // ✅ Added
-  promptHash?: string;    // ✅ Added
+  stamp?: string;
+  promptHash?: string;
+  zkProof?: {
+    proof: any;
+    publicSignals: string[];
+  };
 };
 
 // Internal singleton context (in-memory)
@@ -21,11 +24,6 @@ export function setResponse(response: string) {
   context.response = response;
 }
 
-export function setProof(proof: string) {
-  context.zkProof = proof;
-}
-
-// ✅ New setters (optional, but clean)
 export function setStamp(stamp: string) {
   context.stamp = stamp;
 }
@@ -34,7 +32,11 @@ export function setPromptHash(hash: string) {
   context.promptHash = hash;
 }
 
-// Get the whole context
+export function setZkProof(zk: { proof: any; publicSignals: string[] }) {
+  context.zkProof = zk;
+}
+
+// Get context
 export function getContext(): AgentExecutionContext {
   return context;
 }

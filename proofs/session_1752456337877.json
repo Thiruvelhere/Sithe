@@ -1,0 +1,52 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "Uuu is a musical notation symbol that indicates an upward arpeggio, meaning to play the notes of a chord or melody in succession, starting from the lowest and moving up to the highest.",
+  "timestamp": 1752456337877,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_62820d1e9fcf9ef7cc420654",
+  "promptHash": null,
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "13663548458266673824383462135550082896542028054441622026698092645783609634883",
+        "17890535755783613081179885746879691637355608252580194970363691150605139775846",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "19764431113945859600184388399733050474092713520619375126055047711863744679118",
+          "20935807021963952081717092591545506848372071405910467167874513704864992197482"
+        ],
+        [
+          "8539147493484411768520356137927457418756829273322900534422966779689390532832",
+          "717701278200647848433782437609926115868964425291204369654918313195028262647"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "3695970164998394507443318438540826993635474646031780413135153667238320090368",
+        "4443630810559926417590621625270757868343333057476614163020573323291865245521",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null
+}
