@@ -144,6 +144,3 @@ Ready to demo, test, and integrate into dApps.
 
 ---
 
-*Let me know if you want me to:*
-- *Write a `package.json` description from this.*
-- *Export this as `README.md` right into your local folder.*
