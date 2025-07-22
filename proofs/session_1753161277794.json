@@ -1,0 +1,54 @@
+{
+  "prompt": "who is Owen coyle",
+  "response": "Owen Coyle is a former Northern Irish footballer and current football manager. He played as a striker for clubs in Northern Ireland, England, and Scotland, before transitioning to a managerial career.\n\nAs a player, Coyle played for several clubs, including Derry City, Luton Town, Bolton Wanderers, and Preston North End. During his playing career, he scored over 100 goals at various levels.\n\nAfter retiring from playing, Coyle turned to management in 2007, taking charge of Scottish club Brechin City. He then moved to English football, managing Burnley FC from 2007 to 2012. During his tenure, the team achieved promotion from League One to the Championship and played in several cup competitions.\n\nIn 2013, Coyle became the manager of Wigan Athletic, leading the team to a 10th-place finish in the Premier League during his first season. However, he was sacked by Wigan in 2014 after a poor start to the following campaign.\n\nCoyle has also managed Blackburn Rovers and Nottingham Forest in the English Championship, as well as Ross County in Scotland's Premiership. He is currently the manager of Bolton Wanderers, a club he previously played for, having taken charge in June 2022.\n\nThroughout his managerial career, Coyle has gained a reputation for being an enthusiastic and attack-minded tactician who emphasizes teamwork and player development.",
+  "timestamp": 1753161277794,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_6bf8dba39a4506b50cde5ba5",
+  "promptHash": "6264399997161685341692574698719876498530273268892724325425371605895313659712",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "19849009706531108374310230477249010377948142339602813863577253550810127200010",
+        "799075826354940597031257300037692493432172427912192639011950027401413925104",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "21162358903360302749373549203849613032493151999552459996182733662094098785924",
+          "19269919243769259359211252099722331825428296324970517595159622215715418463917"
+        ],
+        [
+          "8668217820399404936543044651359143971667183609818057522028416287064997056310",
+          "13731570091619874843610040522175671931847706980488047272614799853281726462958"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "723566072443302988829470239216080909544546965446869504175013600453117234542",
+        "3693142460902426288958457214255438277211299955891310952527214893503972753887",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x8f3a7341e7c8fc09ff7b368e011e94ca77822500662542f37a0b497f352dea7a7b491c65eff4941c223b910fdc4587fe918bb1b30b6589c649e8ff72bd83ba131c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

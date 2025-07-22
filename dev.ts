@@ -7,7 +7,7 @@ import { finalizeAndExport } from './src/utils/exporter';
 import { formatError } from './src/utils/formatError';
 
 async function main() {
-  const prompt = "What is uuu in one sentence?";
+  const prompt = "who is Owen coyle";
   const timestamp = Date.now();
 
   try {

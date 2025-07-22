@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^24.0.10",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
@@ -19,8 +20,11 @@
     "vite": "^7.0.2"
   },
   "dependencies": {
+    "body-parser": "^2.2.0",
     "circomlibjs": "^0.1.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "openai": "^5.8.2",
     "snarkjs": "^0.7.5"

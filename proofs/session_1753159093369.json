@@ -1,0 +1,54 @@
+{
+  "prompt": "What is uuu in one sentence?",
+  "response": "Uu is the chemical symbol for uranium, a radioactive, silvery-white metal and the heaviest naturally occurring element on Earth.",
+  "timestamp": 1753159093369,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_848f00803fde102e72162851",
+  "promptHash": "19201350697170854194479429556638814129835558470009917059174434365418824259757",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "4187559992202364712731608262274968754736704874132714435362074805554229317473",
+        "18177525218755509189787167432263328977003030097439899368935504603771451523777",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "3933717338071581318389184319026940628021865916226688900344891782255515402118",
+          "7107073602164995079890792902147055462932650184268076577198076398760429728483"
+        ],
+        [
+          "15125927970919117997232062306374364862637959633050726272291827277549742793413",
+          "15905434865569331701560188006070680265152393047151940191010726064850963858324"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "21157221031178554437002335529240908132535422000797163101498701315514284686562",
+        "3034749538173302171173546030278890473361358171617667768020159616289798253369",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x103c5138ce884389d2ac5b90b74a8dbb93a1a3ac46a24a911a42773cdd55332b76004a1fd8f307ce1e7da1eac961aedeb53034cbe8d266887bc40524729a9edd1b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

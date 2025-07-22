@@ -1,0 +1,54 @@
+{
+  "prompt": "who is Owen coyle",
+  "response": "Owen Coyle is a Scottish former professional footballer and current manager. He played as a striker for several clubs, including Dundee United, Bolton Wanderers, and Burnley, before retiring in 2008.\n\nCoyle began his managerial career with Plymouth Argyle in 2007, leading the club to promotion from League Two to Championship. In 2012, he became the manager of Bolton Wanderers, where he spent three seasons and achieved a promotion to the Premier League in 2011-12.\n\nIn 2013, Coyle joined Wigan Athletic as their manager, but was sacked just six months later after a poor run of results. He then went on to manage Blackburn Rovers from 2012 to 2014 and Bolton Wanderers again from 2015 to 2017.\n\nCoyle has also managed the Republic of Ireland national team, taking charge in 2020.",
+  "timestamp": 1753159483999,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_219677ae09eefaf461dfbc98",
+  "promptHash": "6264399997161685341692574698719876498530273268892724325425371605895313659712",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "448307100837425577409413423124508688486300149405590483762485183948263083107",
+        "11662577129996663176011895356818382176748259819549257561938834943755819801285",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "5559459742215753945019980935236503381264123448145015750787282658595371757042",
+          "15801327367418895946098839614667058507228362404487058619730784700104831473732"
+        ],
+        [
+          "17563075883661783759967142132752672198165763774085945008230817202234083651642",
+          "10572473367965038062521597244267910039998715460088461821051429488663848971151"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "4551855105746295322847285885174639347492722308667105619811044119436644501397",
+        "18153960664161653733990966108239317436865138669739649907370944957719720336016",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x9b061efc8a353d1dfe360c99960906d923e30218261e62c447d2357905b7c67541eab9f0e7a52f92c2e34d6a3de984f8ec64d3cc381ce93c43acb639470824a71b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}
