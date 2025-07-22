@@ -1,0 +1,54 @@
+{
+  "prompt": "d",
+  "response": "It seems like you might have just typed a single letter \"d\". Is there something specific you'd like to talk about or ask, or is there a particular topic you're interested in? I'm here to help and provide information!",
+  "timestamp": 1753171237947,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_f042172d74da2b14fcd21de0",
+  "promptHash": "8540862089960479027598468084103001504332093299703848384261193335348282518119",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "5916087237125211796365751400919300013488480898557476232003055778281138062583",
+        "17763692836279065712922712620548648599166986770920419390179455790242700784176",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "2394439690295208660946209187267017480769702879257871619813698859434510295687",
+          "3320141097785144214494228236551797925955560507769328959211735385706715272979"
+        ],
+        [
+          "17366462604986255871090639733306329575851858536636678962964369242817134633980",
+          "4645350915988512117542504894340559882545997419353074854316054946893137163518"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "1597373406486730758521183107694828072977808593346881592281712174617043620826",
+        "18509980385203837320119092069503409985909584916428023662698555146201610564295",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x9dd3dc1896b9365e0678ee221c87fea690a128b17bd4cb3a24c55fe737b47e812e7c5d2736f562da7b06b920d191ba31e04b6eeefb8b763b6ad5d7f268ad41b41c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

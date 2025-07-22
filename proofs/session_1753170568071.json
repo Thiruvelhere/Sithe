@@ -1,0 +1,54 @@
+{
+  "prompt": "ffff",
+  "response": "It seems like you're trying to tell me something! The \"f\"s in your message might be a sign of enthusiasm or excitement? Would you like to share what's on your mind? I'm all ears!",
+  "timestamp": 1753170568071,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_2e2f761a99fe8b38f8ed2491",
+  "promptHash": "1856468278251218139616207212113551945021793730165386397783846995299857013025",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "4592515804128429021148262065397993609456211907834827898827588896101127307615",
+        "16125630810680472199553990931519219428986007764109238105776044217000487608870",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "1994338516068459050076184789313234842870784414898120409440456230681640827138",
+          "15089900752030659939093687697527095018907090301807786479467325909207181420416"
+        ],
+        [
+          "15902404548988828984022960691888480514569447779672877990519406682236447802903",
+          "5285242599219163824311269707982107058526909298943358593296839417962082517543"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "14742982591900223108229503239703203442122538702456313386689551211575069619783",
+        "15279502737604308046630498612420429702020905700794029665885900486920940308147",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x2e125bb1cbaf0384339545bfa82d5aa343183b9dd643b562b9921c140301882f25272bfbae7f849df86b1de2d6fc856609f8c3db01d49e43cbbc13f69f7734871c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

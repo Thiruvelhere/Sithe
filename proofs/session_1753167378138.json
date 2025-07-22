@@ -1,0 +1,54 @@
+{
+  "prompt": "who is Owen Coyle",
+  "response": "Owen Coyle is a Scottish former footballer and manager who played as a striker. He was born on July 14, 1966, in Crosshouse, East Ayrshire, Scotland.\n\nCoyle started his playing career with Kilmarnock and went on to play for several clubs including Bolton Wanderers, Aberdeen, and Manchester City. He scored over 100 goals in his professional career and was known for his pace, movement, and finishing ability.\n\nAfter retiring as a player, Coyle turned to management and took charge of Brechin City, then Burnley, and finally Preston North End. His most notable achievement was guiding Burnley to promotion to the Premier League in 2009, where they earned a reputation for their attractive style of play.\n\nIn 2012, Coyle became the manager of Bolton Wanderers, replacing Owen Coyle (no relation!). During his two-year tenure at Bolton, he led the team to several cup competitions and maintained their top-flight status. However, he was eventually sacked in October 2014 due to poor results.\n\nCoyle has also managed Wigan Athletic, where he had a brief spell before being replaced by Gary Caldwell. He has been out of management since leaving Wigan in 2017.",
+  "timestamp": 1753167378138,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_f0471018e1bab7cee154149b",
+  "promptHash": "5583763567162948235552502319905212695854055389241869984655918192339465633750",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "21086065564514549290218610418246565931421429278178105889411909538308566060410",
+        "18465437742040614958116264418627143653338686409126987842305384451160581628656",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "8551723309546380672022398313344622220278054870945670137226192837151637586072",
+          "173176454835714412940583902534720745214682801863075361274528201172228425587"
+        ],
+        [
+          "1519204717087449125977990995486334922584077452872549445506085071871388820525",
+          "9230934866897936500898722460676631337225276439849171798219750101400383796751"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "2268118681336062361724114801102108464149269798275438714949610545813421366197",
+        "4993764403456873828723998033521587241623677670595185641401315333809913598807",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0xad5fb98e96664f2caa6577a4bf60bb5804b40adb020a63e44f642c7a44a84f7249a2d50181c609a0c45c182d7d9c0c3f4ffb6defe0b80236c1909cdc5fd8ee381c",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}

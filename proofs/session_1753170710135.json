@@ -1,0 +1,54 @@
+{
+  "prompt": "ffff",
+  "response": "It seems like you might have accidentally typed a string of \"f\"s! If you meant to communicate something else, feel free to try again and I'll do my best to help.",
+  "timestamp": 1753170710135,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_c91e9f8663ac54719613829e",
+  "promptHash": "1856468278251218139616207212113551945021793730165386397783846995299857013025",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "15410620079976229560736217204350484271805379508289576793868392992264141920701",
+        "18280269307871258779136006538053982617691353547147645431130921732010489375976",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "898687116380307470704520003069693792555880780724135623867788253853286339659",
+          "4850522972846688830792912388175622053686811464682580489118643667687432504732"
+        ],
+        [
+          "12772061555651355286070350133851559576815128306485214796258995007495257286740",
+          "4347956794604260335170199312009927987374143141841809056226218164440580935541"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "5551168193423066393855714320146363762572005110669136852345459639350836509595",
+        "6806263729294278789718470191314050742588652619854766020377488795250923575729",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0x2e6c0c873ab4f057ebd048d04cb89670429668e27c4f4d250675916c3dad9f5222a920a51ee7caba096082d2adbfdbf3d4b3a8f1507ec138c00e6064ee6dcf231b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}
