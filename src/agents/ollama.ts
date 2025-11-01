@@ -15,15 +15,28 @@ export class OllamaAgent implements Agent {
         })
       });
 
+      if (!res.ok) {
+        throw new Error(`Ollama returned ${res.status} ${res.statusText}`);
+      }
+
       const data = await res.json();
-      const output = data.response;
+
+      // ✅ Handle multiple possible response formats
+      const output =
+        data.response ||
+        data.output ||
+        data.message?.content ||
+        data.data?.response ||
+        'No response generated.';
+
+      console.log('🤖 [Ollama Response]:', output);
 
       console.log('[ZYPHER]: Received response ✅');
 
       return { text: output };
-    } catch (err) {
-      console.error('[ZYPHER]: Ollama query failed ❌', err);
-      throw new Error('LLM query failed');
+    } catch (err: any) {
+      console.error('[ZYPHER]: Ollama query failed ❌', err.message);
+      return { text: 'Error generating response.' };
     }
   }
 }

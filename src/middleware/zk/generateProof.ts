@@ -1,7 +1,6 @@
 import { exec } from 'child_process';
 import { writeJson, readJson } from '../../utils/fileIO';
 import {
-  
   setZkProof,
   setStamp,
   setPromptHash,
@@ -13,8 +12,15 @@ import fs from 'fs';
 
 export async function generateProof(): Promise<string> {
   const input = await buildZKInput();
-  const zkDir = path.resolve(__dirname); // /src/middleware/zk
-  const circuitsDir = path.join(zkDir, 'circuits');
+
+  // 🔥 Fix: always reference actual circuits inside Zypher SDK repo
+  const sdkRoot = path.resolve(process.cwd(), '../Sithe/src/middleware/zk');
+  const circuitsDir = path.join(sdkRoot, 'circuits');
+
+  // Make sure the directory exists (safe check)
+  if (!fs.existsSync(circuitsDir)) {
+    throw new Error(`[ZYPHER]: Circuits directory not found at ${circuitsDir}`);
+  }
 
   const inputPath = path.join(circuitsDir, 'input.json');
   const witnessPath = path.join(circuitsDir, 'witness.wtns');
@@ -23,7 +29,6 @@ export async function generateProof(): Promise<string> {
   const proofPath = path.join(circuitsDir, 'proof.json');
   const publicPath = path.join(circuitsDir, 'public.json');
 
-  // Write the input.json for witness generation
   console.log('[ZYPHER]: ZK Input', input);
   await writeJson(inputPath, input);
 
@@ -53,11 +58,9 @@ export async function generateProof(): Promise<string> {
           const proofHash = sha256(JSON.stringify(proof));
           const zkStamp = '0xzk_' + proofHash.slice(0, 24);
 
-          // ✅ Set for context & export
           setZkProof({ proof, publicSignals });
-          setPromptHash(input.promptHash); // assuming promptHash is the first
+          setPromptHash(input.promptHash);
           setStamp(zkStamp);
-          
 
           console.log('[ZYPHER]: 🏷️ ZK Stamp:', zkStamp);
           resolve(zkStamp);

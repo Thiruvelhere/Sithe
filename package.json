@@ -1,22 +1,33 @@
 {
   "name": "zypher-sdk",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "verify": "ts-node src/cli/verify.ts",
     "dev": "ts-node dev.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "web3",
+    "zkp",
+    "ai",
+    "sdk",
+    "proof",
+    "blockchain",
+    "groth16",
+    "poseidon"
+  ],
+  "author": "Thiruvel S.",
+  "license": "MIT",
+  "description": "Zypher SDK — Verifiable LLM proof generator using Poseidon + Groth16 ZKPs and Ethereum signatures",
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.10",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.3",
     "vite": "^7.0.2"
   },
   "dependencies": {

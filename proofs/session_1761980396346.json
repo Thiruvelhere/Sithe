@@ -1,0 +1,54 @@
+{
+  "prompt": "who is Owen coyle",
+  "response": "Owen Coyle is a Northern Irish football manager and former player. He was born on February 14, 1966, in Derry, Northern Ireland.\n\nCoyle played as a striker for various clubs in the UK, including Bolton Wanderers, Aberdeen, and Coventry City, before retiring from professional football at the age of 32.\n\nAfter his playing career, Coyle transitioned into management and began coaching at junior levels. He eventually landed his first managerial job with Plymouth Argyle in 2007. During his two-year tenure at Home Park, he led the team to promotion to League One and won the Football League Trophy in 2010-11.\n\nIn 2012, Coyle took over as manager of Bolton Wanderers, a position he held until May 2013. He had some success with the club, including leading them to the FA Cup semifinals and winning the Championship Manager of the Month award twice during his time there.\n\nCoyle then went on to manage Wigan Athletic from June 2013 to November 2015, where he achieved promotion to the Premier League in his first season. However, the team was relegated back to the Championship after just one year at the top level.\n\nIn December 2017, Coyle took over as manager of Ross County in the Scottish Premiership. He led the team to a mid-table finish in his first season and then left the club in May 2020.\n\nCoyle has also managed Burnley (twice), Nottingham Forest, and Hibernian during his managerial career, which has spanned more than two decades. Despite not achieving consistent success at the highest levels of English football, he remains a respected figure in the game and has built a reputation for developing young players and improving teams' performances.",
+  "timestamp": 1761980396346,
+  "config": {
+    "debug": true,
+    "middleware": {
+      "proofOfPrompt": true,
+      "proofOfInference": true
+    },
+    "sandboxMode": false,
+    "apiKey": "abc123",
+    "network": "polygon",
+    "agent": "ollama"
+  },
+  "proofType": "PromptAndInference",
+  "stamp": "0xzk_d6b989c0a5a465d9ba99da69",
+  "promptHash": "6264399997161685341692574698719876498530273268892724325425371605895313659712",
+  "zkProof": {
+    "proof": {
+      "pi_a": [
+        "21545566169993836359168084421982885187181558713337775497802831331656165190360",
+        "3284841255679208265265045132237903350961468814334252597930181287588772156392",
+        "1"
+      ],
+      "pi_b": [
+        [
+          "15892872629115472986258901566321039016317609616031304525719350249468920459306",
+          "5460579969801405296387659994226141503583229673558945139810729123511788633965"
+        ],
+        [
+          "12285067133965925560373030601615397163204757356750996758815363644992785085593",
+          "5838539424480999193219199165893615343772692933627060833369401890992247681378"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "pi_c": [
+        "12568481583247797950915203865411230005721441252318320222111024661513117540672",
+        "6458429561435322912575953433722957139732800366880498322689674863958550491682",
+        "1"
+      ],
+      "protocol": "groth16",
+      "curve": "bn128"
+    },
+    "publicSignals": []
+  },
+  "success": true,
+  "error": null,
+  "signature": "0xec0309754fdf92981466ca8a8d281b9f7846b2fd6cd9ca132346830e8286e9aa0246ebf8d36501bbde6880ec8da264c9d443ae1403ebaa59104b92c6fc0f77b91b",
+  "signedBy": "0x9Ff857b0080D6E9C379b67365af5Fae191F0CFD2"
+}
