@@ -14,8 +14,8 @@ export async function runMiddleware(middlewareName: 'proofOfPrompt' | 'proofOfIn
 
   console.log(`[ZYPHER]: Running ${middlewareName} ✅`)
 
-  if (middlewareName === 'proofOfInference') {
-    await generateProof() // 🔁 Add this await!
+  if (middlewareName === 'proofOfInference' || middlewareName === 'proofOfPrompt') {
+    await generateProof()
   }
 
   // proofOfPrompt can be added similarly later

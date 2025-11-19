@@ -25,12 +25,32 @@ Zypher enables developers to create **tamper-proof, verifiable AI interactions**
 
 ## 📦 Installation
 
+### npm (Recommended)
+
+```bash
+npm install @zypher-sdk/sdk
+```
+
 ### Prerequisites
 - Node.js 18+ 
 - Ollama (for local LLM) or OpenAI API key
-- Git
 
 ### Quick Start
+
+```bash
+# Install the package
+npm install @zypher-sdk/sdk
+
+# Create a new file (e.g., demo.js)
+# Add your code (see Usage section below)
+
+# Run it
+node demo.js
+```
+
+### Development Setup (from source)
+
+If you want to contribute or modify the SDK:
 
 ```bash
 # Clone the repository
@@ -50,7 +70,7 @@ npm run dev
 
 ### Environment Setup
 
-Create a `.env` file:
+Create a `.env` file (only needed for development from source):
 ```bash
 # Ollama Configuration (for local LLM)
 OLLAMA_MODEL=tinyllama

@@ -5,22 +5,35 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+let wallet: Wallet | null = null;
 
-if (!PRIVATE_KEY || !PRIVATE_KEY.startsWith('0x') || PRIVATE_KEY.length !== 66) {
-  throw new Error('❌ Invalid or missing PRIVATE_KEY in .env');
+/**
+ * Initialize wallet lazily - only when signing is needed
+ */
+function getWallet(): Wallet {
+  if (!wallet) {
+    const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
+    if (!PRIVATE_KEY || !PRIVATE_KEY.startsWith('0x') || PRIVATE_KEY.length !== 66) {
+      throw new Error('❌ Invalid or missing PRIVATE_KEY in .env. Required for signing operations.');
+    }
+
+    wallet = new Wallet(PRIVATE_KEY);
+  }
+
+  return wallet;
 }
 
-const wallet = new Wallet(PRIVATE_KEY);
-
 export async function signData(data: string): Promise<string> {
+  const walletInstance = getWallet(); // Lazy initialization
   const hash = sha256(data);
-  const signature = await wallet.signMessage(hash);
+  const signature = await walletInstance.signMessage(hash);
   return signature;
 }
 
 export function getSignerAddress(): string {
-  return wallet.address;
+  const walletInstance = getWallet(); // Lazy initialization
+  return walletInstance.address;
 }
 
 // ✅ Add this: used by verify.ts to recover the signer

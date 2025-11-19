@@ -16,3 +16,10 @@ witness.wtns
 proof.json
 circom.exe
 proofs/
+
+# Documentation
+docs/
+
+# Test Artifacts
+test-*/
+*.tgz

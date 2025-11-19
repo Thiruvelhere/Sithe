@@ -1,16 +1,45 @@
 {
-  "name": "zypher-sdk",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@zypher-sdk/sdk",
+  "version": "1.0.3",
+  "description": "Cryptographically verify AI-generated content using zero-knowledge proofs. Built for developers.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --dts",
+    "build": "tsup src/index.ts --dts && xcopy /E /I /Y src\\middleware\\zk\\circuits dist\\circuits",
     "verify": "ts-node src/cli/verify.ts",
-    "dev": "ts-node dev.ts"
+    "dev": "ts-node dev.ts",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "ai",
+    "verification",
+    "zero-knowledge",
+    "zk-proofs",
+    "groth16",
+    "ai-compliance",
+    "ai-trust",
+    "cryptography",
+    "llm",
+    "openai",
+    "ollama",
+    "blockchain",
+    "web3"
+  ],
+  "author": "Thiruvel S. <contact@sithe.in>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thiruvelhere/Sithe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thiruvelhere/Sithe/issues"
+  },
+  "homepage": "https://sithe.in",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.10",

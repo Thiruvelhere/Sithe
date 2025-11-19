@@ -69,4 +69,6 @@ export async function finalizeAndExport({
   } catch (fsError) {
     console.error('[ZYPHER]: ❌ Failed to write proof file:', fsError);
   }
+
+  return { signature, signedBy };
 }
