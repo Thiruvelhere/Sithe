@@ -217,7 +217,7 @@ We identified and fixed a critical vulnerability where the circuit was compiled 
 - Updated proof generation logic
 - **Verified**: Tampered proofs now fail verification ✅
 
-See [walkthrough.md](./walkthrough.md) for details.
+
 
 ---
 
