@@ -1,0 +1,19 @@
+[33mdf5d688[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m day1
+[33m61c8283[m Update README.md
+[33mcbb7b48[m backend to verify prrofs is completed
+[33m958e2d5[m backend api added
+[33mc2d8ede[m Update README.md
+[33m512fc28[m readme added
+[33m496143f[m prompt hash bug debugged
+[33mf0897ef[m verifier cli tool completed
+[33mf6e4baa[m refined and added exception handling
+[33m1631b09[m zk work completed , generated the real zk stamp
+[33mdd8043f[m zk done
+[33ma40567d[m zk proof generated and exported as json
+[33ma30e4ab[m updated folder structure to handle real zk testing
+[33m0494bc1[m imported local llamma llm to verify fake zk-proof
+[33m1c26abe[m small refining
+[33m02066de[m added test middleware.ts util
+[33ma2a8eeb[m created a separate config.ts for modularity
+[33me38e89f[m tested zypher sdk init() locally
+[33m423705c[m chore: Day 1 SDK init & boilerplate

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "body-parser": "^2.2.0",
+    "circomlib": "^2.0.5",
     "circomlibjs": "^0.1.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",

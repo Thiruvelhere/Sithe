@@ -1,7 +1,7 @@
 import { exec } from 'child_process';
 import { writeJson, readJson } from '../../utils/fileIO';
 import {
-  
+
   setZkProof,
   setStamp,
   setPromptHash,
@@ -23,9 +23,10 @@ export async function generateProof(): Promise<string> {
   const proofPath = path.join(circuitsDir, 'proof.json');
   const publicPath = path.join(circuitsDir, 'public.json');
 
-  // Write the input.json for witness generation
-  console.log('[ZYPHER]: ZK Input', input);
-  await writeJson(inputPath, input);
+  // Write the input.json for witness generation (exclude promptHash as it is an output)
+  const { promptHash, ...witnessInput } = input;
+  console.log('[ZYPHER]: ZK Input', witnessInput);
+  await writeJson(inputPath, witnessInput);
 
   return new Promise((resolve, reject) => {
     // Step 1: Generate witness
@@ -55,9 +56,12 @@ export async function generateProof(): Promise<string> {
 
           // ✅ Set for context & export
           setZkProof({ proof, publicSignals });
-          setPromptHash(input.promptHash); // assuming promptHash is the first
+
+          // Use the promptHash from the public signals (the proof output)
+          const provedHash = publicSignals[0];
+          setPromptHash(provedHash);
           setStamp(zkStamp);
-          
+
 
           console.log('[ZYPHER]: 🏷️ ZK Stamp:', zkStamp);
           resolve(zkStamp);

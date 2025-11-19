@@ -9,7 +9,7 @@ export class OllamaAgent implements Agent {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'llama3',
+          model: 'tinyllama',
           prompt,
           stream: false
         })
