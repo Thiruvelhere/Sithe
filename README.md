@@ -10,7 +10,7 @@
 ## ✅ Status: Production Ready
 The SDK is **fully tested and published**.
 - **Package:** [`@zypher-sdk/sdk`](https://www.npmjs.com/package/@zypher-sdk/sdk)
-- **Version:** `v1.0.3`
+- **Version:** `v1.0.4`
 - **Test Coverage:** Comprehensive (Installation, Proof Generation, Verification, Signatures)
 - **Audit:** Internal audit completed for ZK circuits.
 
@@ -26,7 +26,7 @@ Zypher enables developers to create **tamper-proof, verifiable AI interactions**
 - 🔏 **Wallet Signatures** - EVM-compatible signature verification
 - 🧪 **CLI Verifier** - Verify proofs with optional hash/signer checks
 - 🧃 **JSON Export** - Portable session files with zkStamp
-- 🦾 **Multi-Provider** - Ollama and OpenAI support (more coming)
+- 🦾 **Multi-Provider** - Ollama, OpenAI, Anthropic (Claude), Google Gemini, and Cohere support
 - 🔒 **Production-Ready** - Audited circuits, secure by default
 
 ---
@@ -41,7 +41,12 @@ npm install @zypher-sdk/sdk
 
 ### Prerequisites
 - Node.js 18+ 
-- Ollama (for local LLM) or OpenAI API key
+- At least one LLM provider:
+  - **Ollama** (local, free) - [Install Ollama](https://ollama.ai)
+  - **OpenAI** - Get API key from [platform.openai.com](https://platform.openai.com)
+  - **Anthropic (Claude)** - Get API key from [console.anthropic.com](https://console.anthropic.com)
+  - **Google Gemini** - Get API key from [ai.google.dev](https://ai.google.dev)
+  - **Cohere** - Get API key from [dashboard.cohere.com](https://dashboard.cohere.com)
 
 ### Quick Start
 
@@ -78,15 +83,27 @@ npm run dev
 
 ### Environment Setup
 
-Create a `.env` file (only needed for development from source):
+Create a `.env` file with your chosen provider's API key:
+
 ```bash
-# Ollama Configuration (for local LLM)
+# Choose ONE or more providers:
+
+# Ollama (local, no API key needed)
 OLLAMA_MODEL=tinyllama
 
-# Or OpenAI Configuration
-OPENAI_API_KEY=your_api_key_here
+# OpenAI
+OPENAI_API_KEY=sk-...
 
-# Wallet Configuration (optional)
+# Anthropic (Claude)
+ANTHROPIC_API_KEY=sk-ant-...
+
+# Google Gemini
+GOOGLE_API_KEY=AIza...
+
+# Cohere
+COHERE_API_KEY=...
+
+# Wallet Configuration (optional, for signatures)
 PRIVATE_KEY=your_wallet_private_key
 ```
 
@@ -97,23 +114,60 @@ PRIVATE_KEY=your_wallet_private_key
 ### Basic Example
 
 ```typescript
-import { runZypher } from './src/core/init'
+import { runZypher } from '@zypher-sdk/sdk'
 
 const result = await runZypher({
   prompt: "What is zero-knowledge proof?",
   config: {
-    agent: 'ollama',
+    agent: 'ollama', // or 'openai', 'anthropic', 'gemini', 'cohere'
     debug: true,
     middleware: {
       proofOfPrompt: true,
-      proofOfInference: true
+      proofOfInference: false
     }
   }
 })
 
+console.log('Response:', result.response)
 console.log('Proof:', result.zkProof)
 console.log('Stamp:', result.stamp)
 ```
+
+### Multi-Provider Examples
+
+**Using Anthropic Claude:**
+```typescript
+const result = await runZypher({
+  prompt: "Explain blockchain in simple terms",
+  config: { agent: 'anthropic' }
+})
+```
+
+**Using Google Gemini:**
+```typescript
+const result = await runZypher({
+  prompt: "What are smart contracts?",
+  config: { agent: 'gemini' }
+})
+```
+
+**Using Cohere:**
+```typescript
+const result = await runZypher({
+  prompt: "Describe AI safety",
+  config: { agent: 'cohere' }
+})
+```
+
+**Using OpenAI:**
+```typescript
+const result = await runZypher({
+  prompt: "How does GPT work?",
+  config: { agent: 'openai' }
+})
+```
+
+See the [`examples/`](examples/) directory for complete working examples.
 
 ### Running the Test Script
 
@@ -284,8 +338,8 @@ Build multi-step AI pipelines where each step's authenticity is cryptographicall
 - [x] Ollama integration
 - [x] CLI verification tool
 - [x] Wallet signature support
-- [ ] Configurable LLM models
-- [ ] Multi-provider support (Anthropic, Google)
+- [x] Multi-provider support (OpenAI, Anthropic, Gemini, Cohere)
+- [ ] Configurable LLM models (temperature, max tokens, etc.)
 - [ ] Smart contract deployment
 - [ ] Web dashboard
 - [ ] Batch proof generation

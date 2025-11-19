@@ -1,6 +1,6 @@
 {
   "name": "@zypher-sdk/sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cryptographically verify AI-generated content using zero-knowledge proofs. Built for developers.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,7 @@
     "build": "tsup src/index.ts --dts && xcopy /E /I /Y src\\middleware\\zk\\circuits dist\\circuits",
     "verify": "ts-node src/cli/verify.ts",
     "dev": "ts-node dev.ts",
+    "test-providers": "ts-node test-providers.ts",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -46,12 +47,17 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "vite": "^7.0.2"
+    "vite": "^7.0.2",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.24"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@google/generative-ai": "^0.21.0",
     "body-parser": "^2.2.0",
     "circomlib": "^2.0.5",
     "circomlibjs": "^0.1.7",
+    "cohere-ai": "^7.14.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
