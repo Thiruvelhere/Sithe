@@ -3,8 +3,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
 [![ZK Proofs](https://img.shields.io/badge/ZK-Groth16-purple)](https://github.com/iden3/snarkjs)
+[![npm version](https://img.shields.io/npm/v/@zypher-sdk/sdk.svg)](https://www.npmjs.com/package/@zypher-sdk/sdk)
 
 > 🧠 **Cryptographically verify AI-generated content** — Prove a specific prompt was used to generate an LLM response using Zero-Knowledge Proofs.
+
+## ✅ Status: Production Ready
+The SDK is **fully tested and published**.
+- **Package:** [`@zypher-sdk/sdk`](https://www.npmjs.com/package/@zypher-sdk/sdk)
+- **Version:** `v1.0.3`
+- **Test Coverage:** Comprehensive (Installation, Proof Generation, Verification, Signatures)
+- **Audit:** Internal audit completed for ZK circuits.
 
 Zypher enables developers to create **tamper-proof, verifiable AI interactions** using Poseidon hashing, Groth16 ZK proofs, and EVM wallet signatures. Perfect for AI DAOs, content verification, and compliance.
 
