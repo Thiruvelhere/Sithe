@@ -35,7 +35,7 @@ export async function finalizeAndExport({
   const finalStamp = stamp ?? context.stamp ?? '';
   const finalPromptHash = promptHash ?? context.promptHash ?? null;
 
-  // ✅ Combine message for signing
+  // ✅ Combine message for signing (optional if PRIVATE_KEY is missing)
   const dataToSign = prompt + response + finalStamp;
   const signature = await signData(dataToSign);
   const signedBy = getSignerAddress();

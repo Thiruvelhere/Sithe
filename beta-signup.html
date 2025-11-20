@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Zypher Beta Program | Cryptographic AI Verification</title>
+    <meta name="description"
+        content="Get early access to Zypher SDK - cryptographically verify AI-generated content using zero-knowledge proofs. Join our exclusive beta program.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --success: #10b981;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-animation::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            bottom: -200px;
+            left: -200px;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(100px, -100px) rotate(120deg);
+            }
+
+            66% {
+                transform: translate(-50px, 50px) rotate(240deg);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--primary);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .benefit-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .benefit-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Form Section */
+        .form-section {
+            max-width: 600px;
+            margin: 60px auto;
+            background: var(--bg-card);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Code Preview */
+        .code-preview {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-preview h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        pre {
+            background: var(--bg-dark);
+            padding: 25px;
+            border-radius: 10px;
+            overflow-x: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #a5f3fc;
+        }
+
+        /* Perks List */
+        .perks-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .perks-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .perks-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: var(--success);
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .form-section {
+                padding: 30px 20px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+
+    <header>
+        <div class="container">
+            <div class="logo"> Zypher</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="badge"> Limited Beta Access</div>
+            <h1>Join the Zypher<br>Beta Program</h1>
+            <p class="subtitle">Cryptographically verify AI-generated content using zero-knowledge proofs</p>
+        </section>
+
+        <section class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Early Access</h3>
+                <p>Be the first to use Zypher SDK before public launch and shape the product roadmap</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>$100 Free Credits</h3>
+                <p>Get $100 in free credits on launch day plus lifetime 20% discount</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏆</div>
+                <h3>Founding User Badge</h3>
+                <p>Recognition as a founding user and featured on our website</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">👥</div>
+                <h3>Direct Founder Access</h3>
+                <p>Private Discord channel with the founding team and priority support</p>
+            </div>
+        </section>
+
+        <section class="code-preview">
+            <h3> See It In Action</h3>
+            <pre><code>import { runZypher } from '@zypher-sdk/sdk'
+
+const result = await runZypher({
+  prompt: "What is zero-knowledge proof?",
+  config: { agent: 'openai' }
+})
+
+console.log('Response:', result.response)
+console.log('ZK Proof:', result.zkProof)
+console.log('Stamp:', result.stamp) // 0xzk_fdc92ec4f21e7b64307e91ef</code></pre>
+        </section>
+
+        <section class="form-section">
+            <h2>Apply for Beta Access</h2>
+            <form id="betaForm" action="https://formspree.io/f/meonlwwr" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">Profile Type *</label>
+                    <select id="profile" name="profile" required>
+                        <option value="">Select your profile</option>
+                        <option value="ai-developer">AI Developer</option>
+                        <option value="web3-developer">Web3/Crypto Developer</option>
+                        <option value="compliance">Compliance/Enterprise</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="github">GitHub / Twitter (Optional)</label>
+                    <input type="text" id="github" name="github" placeholder="@yourusername">
+                </div>
+
+                <div class="form-group">
+                    <label for="usecase">What's your primary use case? *</label>
+                    <textarea id="usecase" name="usecase" required
+                        placeholder="e.g., DAO governance, content verification, compliance..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience with ZK proofs or AI?</label>
+                    <textarea id="experience" name="experience"
+                        placeholder="Tell us about your background (optional)"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Apply for Beta Access</button>
+            </form>
+
+            <ul class="perks-list">
+                <li><span class="check-icon">✅</span> Early access to SDK</li>
+                <li><span class="check-icon">✅</span> $100 in free credits on launch</li>
+                <li><span class="check-icon">✅</span> Founding user badge</li>
+                <li><span class="check-icon">✅</span> Lifetime 20% discount</li>
+                <li><span class="check-icon">✅</span> Priority support</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Built by <a href="https://github.com/Thiruvelhere" target="_blank">Thiruvel S.</a></p>
+            <p><a href="https://github.com/Thiruvelhere/Sithe" target="_blank">GitHub</a> • <a href="https://sithe.in"
+                    target="_blank">Website</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        const form = document.getElementById('betaForm');
+        form.addEventListener('submit', function (e) {
+            // Formspree will handle the submission
+            // You can add custom analytics tracking here
+            console.log('Beta signup submitted');
+        });
+    </script>
+</body>
+
+</html>

@@ -52,6 +52,7 @@ export interface RunZypherResult {
 export async function runZypher(options: RunZypherOptions): Promise<RunZypherResult> {
     const { prompt, config: userConfig } = options
     const timestamp = Date.now()
+    let response = '' // Declare outside try block so it's accessible in catch
 
     try {
         // Initialize with default config if provided
@@ -80,7 +81,7 @@ export async function runZypher(options: RunZypherOptions): Promise<RunZypherRes
 
         // Run LLM
         const res = await agent.run(prompt)
-        const response = res.text
+        response = res.text // Assign to outer variable
         setResponse(response)
 
         // Generate proof of inference if enabled
@@ -119,7 +120,7 @@ export async function runZypher(options: RunZypherOptions): Promise<RunZypherRes
 
         return {
             prompt,
-            response: '',
+            response, // Use the captured response instead of empty string
             timestamp,
             success: false,
             error: typeof errorMessage === 'string' ? errorMessage : JSON.stringify(errorMessage),

@@ -10,12 +10,13 @@ let wallet: Wallet | null = null;
 /**
  * Initialize wallet lazily - only when signing is needed
  */
-function getWallet(): Wallet {
+function getWallet(): Wallet | null {
   if (!wallet) {
     const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
     if (!PRIVATE_KEY || !PRIVATE_KEY.startsWith('0x') || PRIVATE_KEY.length !== 66) {
-      throw new Error('❌ Invalid or missing PRIVATE_KEY in .env. Required for signing operations.');
+      console.warn('⚠️  [ZYPHER]: No valid PRIVATE_KEY found in .env. Output will not be signed.');
+      return null;
     }
 
     wallet = new Wallet(PRIVATE_KEY);
@@ -24,15 +25,18 @@ function getWallet(): Wallet {
   return wallet;
 }
 
-export async function signData(data: string): Promise<string> {
+export async function signData(data: string): Promise<string | null> {
   const walletInstance = getWallet(); // Lazy initialization
+  if (!walletInstance) return null;
+
   const hash = sha256(data);
   const signature = await walletInstance.signMessage(hash);
   return signature;
 }
 
-export function getSignerAddress(): string {
+export function getSignerAddress(): string | null {
   const walletInstance = getWallet(); // Lazy initialization
+  if (!walletInstance) return null;
   return walletInstance.address;
 }
 
