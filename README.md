@@ -12,6 +12,8 @@
 
 Zypher is the **missing layer of trust** for the AI era. It allows developers to generate a cryptographic proof that a specific AI response was generated from a specific prompt, ensuring integrity, compliance, and transparency.
 
+[**📄 Read the Technical Whitepaper**](WHITEPAPER.md) • [**🚀 Join the Private Beta**](https://thiruvelhere.github.io/Sithe/)
+
 ---
 
 ## 🤝 Join the Inner Circle
