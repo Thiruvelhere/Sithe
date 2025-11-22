@@ -1,14 +1,15 @@
 {
   "name": "@zypher-sdk/sdk",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Cryptographically verify AI-generated content using zero-knowledge proofs. Built for developers.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --dts && xcopy /E /I /Y src\\middleware\\zk\\circuits dist\\circuits",
+    "build": "tsup src/index.ts --dts && xcopy /E /I /Y src\\\\middleware\\\\zk\\\\circuits dist\\\\circuits",
     "verify": "ts-node src/cli/verify.ts",
     "dev": "ts-node dev.ts",
     "test-providers": "ts-node test-providers.ts",
+    "postinstall": "node scripts/postinstall.js",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -38,6 +39,7 @@
   "homepage": "https://sithe.in",
   "files": [
     "dist",
+    "scripts",
     "README.md",
     "LICENSE"
   ],
