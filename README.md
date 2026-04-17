@@ -6,11 +6,13 @@
 [![npm version](https://img.shields.io/npm/v/@zypher-sdk/sdk.svg)](https://www.npmjs.com/package/@zypher-sdk/sdk)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/vffYw3cGhc)
 
-# The Standard for Verifiable AI
+# Cryptographic Audit Trails for AI
 
-> **Trust, but verify.** Cryptographically bind LLM outputs to their prompts using Zero-Knowledge Proofs.
+> **Trust, but verify.** Create an auditable chain of custody for your AI prompts and responses using EVM signatures and Zero-Knowledge hashing.
 
-Zypher is the **missing layer of trust** for the AI era. It allows developers to generate a cryptographic proof that a specific AI response was generated from a specific prompt, ensuring integrity, compliance, and transparency.
+Zypher provides developers with a structured way to securely log AI interactions. By hashing the input prompt in a ZK-friendly way (Poseidon), generating a Groth16 proof of that hash, and signing the metadata alongside the AI's response using an EVM wallet, Zypher creates an immutable audit trail.
+
+While this doesn't execute the AI inference inside a ZK circuit, it secures the log of what was asked and what the provider returned, creating accountability for AI workflows.
 
 [**📄 Read the Technical Whitepaper**](WHITEPAPER.md) • [**🚀 Join the Private Beta**](https://thiruvelhere.github.io/Sithe/)
 
@@ -30,12 +32,12 @@ We are building the future of **Verifiable AI** together. Whether you're buildin
 
 ## 🚀 Why Zypher?
 
-In a world of deepfakes and hallucinations, **proof matters**.
+In a world of deepfakes and hallucinations, **accountability matters**.
 
-*   ✅ **Compliance Ready**: Meet emerging regulations (EU AI Act) by proving *exactly* what your AI models are doing.
-*   🔐 **Tamper-Proof**: Using Groth16 ZK proofs and Poseidon hashing, our proofs are mathematically impossible to forge.
+*   ✅ **Audit Ready**: Maintain a signed log of what was prompted and received to assist with transparency regulations (like the EU AI Act).
+*   🔐 **Tamper-Evident Logs**: Using Groth16 ZK proofs for the prompt hash and ECDSA signatures for the full payload, we establish a verifiable chain of custody for your sessions.
 *   🦾 **Multi-Provider**: Works seamlessly with **OpenAI**, **Anthropic (Claude)**, **Google Gemini**, **Cohere**, and **Ollama**.
-*   ⚡ **Production Grade**: Fully audited circuits, written in TypeScript, and ready for scale.
+*   ⚡ **Production Grade**: Fully audited prompt-hashing circuits, written in TypeScript, and ready for integration.
 
 ---
 
@@ -49,7 +51,7 @@ npm install @zypher-sdk/sdk
 
 ## ⚡ Quick Start
 
-Generate your first verifiable AI response in under 30 seconds.
+Generate your first verifiable AI audit trail in under 30 seconds.
 
 ```typescript
 import { runZypher } from '@zypher-sdk/sdk'
@@ -62,10 +64,10 @@ const result = await runZypher({
   }
 })
 
-// 2. You now have a cryptographically signed proof!
+// 2. You now have a cryptographically signed audit log!
 console.log('✅ Response:', result.response)
-console.log('🔐 ZK Proof:', result.zkProof)
-console.log('✍️ Signature:', result.signature)
+console.log('🔐 ZK Proof of Prompt:', result.zkProof)
+console.log('✍️ Wallet Signature:', result.signature)
 ```
 
 ---
@@ -86,7 +88,7 @@ We support the world's best AI models out of the box. Just set your API key in `
 
 ## 🧪 Verification
 
-Don't just take our word for it. Verify the proofs yourself using our CLI.
+Don't just take our word for it. Verify the signed logs yourself using our CLI.
 
 ```bash
 # Verify a proof file
@@ -105,8 +107,8 @@ npm run verify -- proofs/session_1763529005432.json
 ## 🛠️ How It Works
 
 1.  **Hash**: We hash your prompt using **Poseidon**, a ZK-friendly hashing algorithm.
-2.  **Prove**: We generate a **Zero-Knowledge Proof (Groth16)** that attests that the hash corresponds to the prompt.
-3.  **Sign**: The proof and response are signed by a wallet, creating an immutable **Chain of Trust**.
+2.  **Prove**: We generate a **Zero-Knowledge Proof (Groth16)** that attests you know the prompt corresponding to the hash.
+3.  **Sign**: The proof, prompt, and response are packaged together and signed by an EVM wallet, creating an immutable **Chain of Custody**.
 
 ---
 
